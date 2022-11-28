@@ -22,11 +22,11 @@ const AfricasTalking = require('africastalking')(credentials);
 // Get the airtime service
 const airtime = AfricasTalking.AIRTIME;
 
-async function sendAirtime(phone, amount) {
+async function sendAirtime(phone, amount,code) {
     const options = {
         recipients: [{
             phoneNumber: phone,
-            currencyCode: "KES",
+            currencyCode: code,
             amount: amount
         }]
     };
